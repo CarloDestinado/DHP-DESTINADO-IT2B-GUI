@@ -21,19 +21,23 @@ public class Record extends javax.swing.JFrame {
      */
     public Record() {
         initComponents();
+    
+     displayData();
     }
-public void displayData(){
-        try{
+
+    public void displayData()
+    {
+        try
+        {
             dbConnector dbc = new dbConnector();
-            ResultSet rs = dbc.getData("SELECT * FROM tbl_user");
-            Patient_table.setModel(DbUtils.resultSetToTableModel(rs));
+            ResultSet rs = dbc.getData("SELECT u_fname, u_lname, u_username, "
+                                        + "u_type, u_address, u_age FROM tbl_user");
+            account_table.setModel(DbUtils.resultSetToTableModel(rs));
              rs.close();
         }catch(SQLException ex){
             System.out.println("Errors: "+ex.getMessage());
-        
         }
-        
-    }
+}
 
 
 
