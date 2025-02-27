@@ -57,6 +57,8 @@ public class FILLUPFORM extends javax.swing.JFrame {
         username = new javax.swing.JTextField();
         password = new javax.swing.JTextField();
         ads = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         jLabel4.setText("AGE:");
 
@@ -81,7 +83,7 @@ public class FILLUPFORM extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 500));
+        setPreferredSize(new java.awt.Dimension(500, 500));
 
         jPanel2.setBackground(new java.awt.Color(51, 153, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,89 +107,92 @@ public class FILLUPFORM extends javax.swing.JFrame {
 
         name.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         name.setText("FIRSTNAME");
-        jPanel41.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, -1));
+        jPanel41.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, -1, -1));
 
         age.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         age.setText("LASTNAME");
-        jPanel41.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+        jPanel41.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, -1, -1));
 
         address.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         address.setText("USERNAME");
-        jPanel41.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, -1, -1));
+        jPanel41.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, -1, -1));
 
         dob.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         dob.setText("PASSWORD");
-        jPanel41.add(dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
+        jPanel41.add(dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
 
         phone.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         phone.setText("ADDRESS");
-        jPanel41.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
+        jPanel41.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
 
         stats.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         stats.setText("AGE");
-        jPanel41.add(stats, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, -1));
+        jPanel41.add(stats, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
 
         pwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pwdActionPerformed(evt);
             }
         });
-        jPanel41.add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 170, -1));
+        jPanel41.add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 170, -1));
 
         fname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fnameActionPerformed(evt);
             }
         });
-        jPanel41.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 170, -1));
+        jPanel41.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 170, -1));
 
         lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lnameActionPerformed(evt);
             }
         });
-        jPanel41.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 170, -1));
+        jPanel41.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 170, -1));
 
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
             }
         });
-        jPanel41.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 170, -1));
+        jPanel41.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 170, -1));
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
             }
         });
-        jPanel41.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 170, -1));
+        jPanel41.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 170, -1));
 
         ads.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adsActionPerformed(evt);
             }
         });
-        jPanel41.add(ads, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 170, -1));
+        jPanel41.add(ads, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 170, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC7\\Documents\\NetBeansProjects\\DHP\\src\\icons\\icons8-medical-records-100.png")); // NOI18N
+        jPanel41.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC7\\Documents\\NetBeansProjects\\DHP\\src\\icons\\icons8-user-100.png")); // NOI18N
+        jPanel41.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(71, 71, 71))
+                    .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE))
         );
 
         pack();
@@ -302,8 +307,10 @@ public class FILLUPFORM extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel41;
