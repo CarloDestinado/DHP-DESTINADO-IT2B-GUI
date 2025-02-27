@@ -5,7 +5,7 @@
  */
 package dhp;
 
-import dhp.Main;
+import dhp.DHPMAIN;
 
 /**
  *
@@ -102,7 +102,7 @@ public class Records extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 510, 60));
 
-        jDesktopPane1.setBackground(new java.awt.Color(204, 204, 255));
+        jDesktopPane1.setBackground(new java.awt.Color(51, 153, 255));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,18 +132,18 @@ public class Records extends javax.swing.JFrame {
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
                 .addGap(20, 20, 20))
         );
 
-        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 480, 300));
+        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 480, 310));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Main m = new Main();
+        DHPMAIN m = new DHPMAIN();
         m.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
