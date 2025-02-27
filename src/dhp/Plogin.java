@@ -5,6 +5,8 @@
  */
 package dhp;
 
+import admin.Record;
+
 /**
  *
  * @author SCC-COLLEGE
@@ -98,26 +100,27 @@ public class Plogin extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jDesktopPane2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
+        jDesktopPane2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
 
         ADUSERT2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ADUSERT2.setText("PASSWORD");
-        jDesktopPane2.add(ADUSERT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
-        jDesktopPane2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 210, 22));
-        jDesktopPane2.add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 210, -1));
+        jDesktopPane2.add(ADUSERT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        jDesktopPane2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 210, 22));
+        jDesktopPane2.add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 210, -1));
 
+        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 153, 255));
-        jButton4.setText("CANCEL");
+        jButton4.setText("BACK");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jDesktopPane2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+        jDesktopPane2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, -1, -1));
 
         ADUSERT3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ADUSERT3.setText("USERNAME ");
-        jDesktopPane2.add(ADUSERT3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        jDesktopPane2.add(ADUSERT3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -33,6 +33,7 @@ public class fillup extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel41 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         name = new javax.swing.JLabel();
         age = new javax.swing.JLabel();
@@ -62,6 +63,9 @@ public class fillup extends javax.swing.JFrame {
         jPanel41.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel41.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\marju\\Desktop\\DHP-DESTNADO-IT2B-GUI\\src\\icons\\icons8-user-100.png")); // NOI18N
+        jPanel41.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, -1));
+
         jButton2.setBackground(new java.awt.Color(51, 153, 255));
         jButton2.setText("REGISTER");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -69,73 +73,73 @@ public class fillup extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel41.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        jPanel41.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
 
         name.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         name.setText("FIRSTNAME");
-        jPanel41.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, -1, -1));
+        jPanel41.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, -1, -1));
 
         age.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         age.setText("LASTNAME");
-        jPanel41.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, -1, -1));
+        jPanel41.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, -1, -1));
 
         address.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         address.setText("USERNAME");
-        jPanel41.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, -1, -1));
+        jPanel41.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
 
         dob.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         dob.setText("PASSWORD");
-        jPanel41.add(dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+        jPanel41.add(dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, -1, -1));
 
         phone.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         phone.setText("ADDRESS");
-        jPanel41.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
+        jPanel41.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
 
         stats.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         stats.setText("AGE");
-        jPanel41.add(stats, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
+        jPanel41.add(stats, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
 
         age1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 age1ActionPerformed(evt);
             }
         });
-        jPanel41.add(age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 170, -1));
+        jPanel41.add(age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 170, -1));
 
         fname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fnameActionPerformed(evt);
             }
         });
-        jPanel41.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 170, -1));
+        jPanel41.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 170, -1));
 
         lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lnameActionPerformed(evt);
             }
         });
-        jPanel41.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 170, -1));
+        jPanel41.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 170, -1));
 
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
             }
         });
-        jPanel41.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 170, -1));
+        jPanel41.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 170, -1));
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
             }
         });
-        jPanel41.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 170, -1));
+        jPanel41.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 170, -1));
 
         ads.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adsActionPerformed(evt);
             }
         });
-        jPanel41.add(ads, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 170, -1));
+        jPanel41.add(ads, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 170, -1));
         jPanel41.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
         jPanel41.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
 
@@ -143,18 +147,15 @@ public class fillup extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 127, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -172,7 +173,7 @@ public class fillup extends javax.swing.JFrame {
 
             dbConnector dbc = new dbConnector();
 
-            if (dbc.insertData("INSERT INTO user(u_fname, u_lname, u_username, u_password, u_address, u_age) "
+            if (dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_username, u_password, u_address, u_age) "
                 + "VALUES('" + fname.getText() + "', '" + lname.getText() + "', '"
                 + username.getText() + "', '" + password.getText() + "', '" + age.getText() + "','"
                 + ads.getText() + "','")) {
@@ -257,6 +258,7 @@ public class fillup extends javax.swing.JFrame {
     private javax.swing.JTextField fname;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel2;

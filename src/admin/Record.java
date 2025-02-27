@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dhp;
+package admin;
+
+import config.dbConnector;
+import dhp.DHPMAIN;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -17,6 +22,20 @@ public class Record extends javax.swing.JFrame {
     public Record() {
         initComponents();
     }
+public void displayData(){
+        try{
+            dbConnector dbc = new dbConnector();
+            ResultSet rs = dbc.getData("SELECT * FROM tbl_user");
+            Patient_table.setModel(DbUtils.resultSetToTableModel(rs));
+             rs.close();
+        }catch(SQLException ex){
+            System.out.println("Errors: "+ex.getMessage());
+        
+        }
+        
+    }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,6 +59,9 @@ public class Record extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(600, 500));
+        setMinimumSize(new java.awt.Dimension(600, 500));
+        setPreferredSize(new java.awt.Dimension(600, 379));
 
         jPanel2.setBackground(new java.awt.Color(51, 153, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,7 +82,7 @@ public class Record extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 70, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 90, -1));
 
         jButton5.setBackground(new java.awt.Color(51, 153, 255));
         jButton5.setText("UPDATE");
@@ -69,7 +91,7 @@ public class Record extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 100, 30));
 
         jButton6.setBackground(new java.awt.Color(51, 153, 255));
         jButton6.setText("DELETE");
@@ -78,7 +100,7 @@ public class Record extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 70, -1));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 90, -1));
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -133,15 +155,12 @@ public class Record extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(291, 291, 291)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 7, Short.MAX_VALUE))
+                .addGap(381, 381, 381)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,8 +169,7 @@ public class Record extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
-                    .addComponent(jDesktopPane1))
-                .addGap(0, 122, Short.MAX_VALUE))
+                    .addComponent(jDesktopPane1)))
         );
 
         pack();
