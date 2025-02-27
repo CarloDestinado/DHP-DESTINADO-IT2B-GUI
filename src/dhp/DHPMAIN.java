@@ -5,7 +5,7 @@
  */
 package dhp;
 
-import admin.Admin;
+import admin.admindash;
 
 /**
  *
@@ -120,26 +120,26 @@ public class DHPMAIN extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Patientlogin rl = new Patientlogin();
+        Plogin rl = new Plogin();
         rl.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        FILLUPFORM fm = new FILLUPFORM();
+        fillup fm = new fillup();
         fm.setVisible(true);
         this.dispose();
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Records rd = new Records();
+        Record rd = new Record();
         rd.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Admin ad = new Admin();
+        admindash ad = new admindash();
         ad.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
