@@ -240,7 +240,7 @@ public class FILLUPFORM extends javax.swing.JFrame {
 
             dbConnector dbc = new dbConnector();
 
-            if (dbc.insertData("INSERT INTO user(r_fname, r_lname, r_username, r_password, r_address, r_age,status) "
+            if (dbc.insertData("INSERT INTO user(u_fname, u_lname, u_username, u_password, u_address, u_age) "
                 + "VALUES('" + fname.getText() + "', '" + lname.getText() + "', '"
                 + username.getText() + "', '" + password.getText() + "', '" + age.getText() + "','"
                 + ads.getText() + "','" + PWD.getText() + "', 'PENDING')")) {
