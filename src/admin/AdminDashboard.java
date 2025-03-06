@@ -55,19 +55,25 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         account_table = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
 
         jButton4.setBackground(new java.awt.Color(51, 153, 255));
         jButton4.setText("ADD");
@@ -77,15 +83,35 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(51, 153, 255));
+        jButton5.setText("UPDATE");
+        jButton5.setMaximumSize(new java.awt.Dimension(75, 25));
+        jButton5.setMinimumSize(new java.awt.Dimension(75, 25));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Admin Dashboard");
+
+        jButton6.setBackground(new java.awt.Color(51, 153, 255));
+        jButton6.setText("DELETE");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 500));
         setMinimumSize(new java.awt.Dimension(600, 500));
-        setPreferredSize(new java.awt.Dimension(600, 500));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(0, 500));
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 0, 510, -1));
 
         jDesktopPane1.setBackground(new java.awt.Color(51, 153, 255));
         jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,9 +129,10 @@ public class AdminDashboard extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(account_table);
 
-        jDesktopPane1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 670, 380));
+        jDesktopPane1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 730, 440));
 
         jPanel2.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Logout");
@@ -116,33 +143,12 @@ public class AdminDashboard extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 110, 30));
 
-        jButton5.setBackground(new java.awt.Color(51, 153, 255));
-        jButton5.setText("UPDATE");
-        jButton5.setMaximumSize(new java.awt.Dimension(75, 25));
-        jButton5.setMinimumSize(new java.awt.Dimension(75, 25));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 140, 40));
-
-        jButton6.setBackground(new java.awt.Color(51, 153, 255));
-        jButton6.setText("DELETE");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 140, 40));
-
         jPanel4.setBackground(new java.awt.Color(51, 153, 255));
-        jPanel4.setLayout(null);
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("ADD USER");
-        jPanel4.add(jLabel3);
-        jLabel3.setBounds(0, 90, 120, 10);
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 80, 20));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-users.png"))); // NOI18N
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -150,24 +156,60 @@ public class AdminDashboard extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        jPanel4.add(jLabel4);
-        jLabel4.setBounds(10, 0, 110, 90);
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 110, 90));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 120, 110));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 120, 110));
+
+        jPanel5.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("UPDATE USER");
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 120, 20));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/updateUser.png"))); // NOI18N
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 90));
+
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 120, 110));
+
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setText("DELETE USER");
+        jPanel7.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 120, 110));
 
         jDesktopPane1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 470));
 
         jPanel3.setBackground(new java.awt.Color(51, 153, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Admin Dashboard");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 680, 60));
-
         jDesktopPane1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 80));
 
-        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -3, 840, 470));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(384, 384, 384)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -191,8 +233,16 @@ public class AdminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-OHAHA        // TODO add your handling code here:
+    AddAdmin m = new AddAdmin();
+        m.setVisible(true);
+        this.dispose();  // TODO add your handling code here:
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+       UpdateUser m = new UpdateUser();
+        m.setVisible(true);
+        this.dispose();   // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -241,10 +291,16 @@ OHAHA        // TODO add your handling code here:
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
