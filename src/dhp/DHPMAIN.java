@@ -211,7 +211,41 @@ public class DHPMAIN extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        String uname = username.getText().trim();
+         String pass = new String(password.getPassword()).trim();
+    
+        if(pass.isEmpty() || uname.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Please Fill all Boxes");
+        }else if(logAcc(uname,pass))
+        {
+        if(!status.equals("Active"))
+        {
+            JOptionPane.showMessageDialog(null, "Inactive Account, Contact the Admin");
+        }else
+        {
+
+            if(type.equals("Admin"))
+            {
+                JOptionPane.showMessageDialog(null, "Login Succesfully");
+                AdminDashboard ad = new AdminDashboard();
+                ad.setVisible(true);
+                this.dispose();
+            }else if(type.equals("Patient"))
+            {
+                JOptionPane.showMessageDialog(null, "Login Succesfully");
+                PatientDashboard ed = new PatientDashboard();
+                ed.setVisible(true);
+                this.dispose();
+            }else if(!type.equals("Employee") || !type.equals("Pending") || !type.equals("Admin"))
+            {
+                JOptionPane.showMessageDialog(null, "Unknown Account Type, Contact the Admin");
+            }
+        }
+        }else
+        {
+            JOptionPane.showMessageDialog(null, "Invalid Account");
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
