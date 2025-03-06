@@ -176,6 +176,11 @@ public class Signup extends javax.swing.JFrame {
                 jButton2MouseClicked(evt);
             }
         });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel41.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 190, 40));
 
         stats.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -278,6 +283,10 @@ public class Signup extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

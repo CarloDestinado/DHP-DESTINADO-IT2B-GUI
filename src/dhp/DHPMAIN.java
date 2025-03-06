@@ -66,7 +66,6 @@ public class DHPMAIN extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         ADUSERT = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
@@ -77,6 +76,7 @@ public class DHPMAIN extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         password = new javax.swing.JPasswordField();
 
@@ -104,7 +104,6 @@ public class DHPMAIN extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, -1));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         ADUSERT.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -137,6 +136,7 @@ public class DHPMAIN extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("DIAGNOSIS HISTORY PROFILE");
         right.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 350, -1));
+        right.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 100, 50));
 
         jPanel1.add(right, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 356, -1));
 
