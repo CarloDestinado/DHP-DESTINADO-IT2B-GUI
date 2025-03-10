@@ -148,6 +148,11 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("ADD USER");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 80, 20));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-users.png"))); // NOI18N
@@ -180,7 +185,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setText("DELETE USER");
-        jPanel7.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        jPanel7.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 120, 110));
 
@@ -243,6 +248,12 @@ public class AdminDashboard extends javax.swing.JFrame {
         m.setVisible(true);
         this.dispose();   // TODO add your handling code here:
     }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+      AddAdmin m = new AddAdmin();
+        m.setVisible(true);
+        this.dispose();  // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
