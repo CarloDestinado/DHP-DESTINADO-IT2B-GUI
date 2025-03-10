@@ -181,7 +181,7 @@ public class Signup extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel41.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 190, 40));
+        jPanel41.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 190, 40));
 
         stats.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         stats.setText("TYPE");
@@ -202,7 +202,12 @@ public class Signup extends javax.swing.JFrame {
                 jButton3MouseClicked(evt);
             }
         });
-        jPanel41.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 190, 40));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel41.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, 190, 40));
         jPanel41.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 270, 30));
 
         dob1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -218,7 +223,7 @@ public class Signup extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+            .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
         );
 
         pack();
@@ -287,6 +292,10 @@ public class Signup extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
