@@ -27,7 +27,7 @@ public class DHPMAIN extends javax.swing.JFrame {
     }
     
         static String status;
-    static String type;
+        static String type;
 
     
     public static boolean logAcc(String username, String password)
@@ -42,7 +42,7 @@ public class DHPMAIN extends javax.swing.JFrame {
                 type = resultSet.getString("u_type");
                 session sess = session.getInstance();
 
-                sess.setUid(resultSet.getString("u_id"));
+                sess.setUid(resultSet.getInt("u_id"));
                 sess.setFname(resultSet.getString("u_fname"));
                 sess.setLname(resultSet.getString("u_lname"));
                 sess.setUsername(resultSet.getString("u_username"));
