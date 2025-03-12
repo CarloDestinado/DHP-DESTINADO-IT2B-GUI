@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/admin/AddUser.java</file>
             <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/admin/AdminDashboard.java</file>
-            <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/db/dhpapp.sql</file>
+            <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/config/dbConnector.java</file>
             <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/config/session.java</file>
             <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/user/UserDashboard.java</file>
             <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/dhp/DHPMAIN.java</file>
+            <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/admin/UpdateUser.java</file>
             <file>file:/C:/Users/marju/Desktop/DHP-DESTINADO-IT2B-GUI/src/dhp/Signup.java</file>
         </group>
     </open-files>
