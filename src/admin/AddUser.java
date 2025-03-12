@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author SCC-COLLEGE
  */
-public class AddAdmin extends javax.swing.JFrame {
+public class AddUser extends javax.swing.JFrame {
 
     /**
      * Creates new form AddAdmin
      */
-    public AddAdmin() {
+    public AddUser() {
         initComponents();
     }
 
@@ -53,9 +53,7 @@ public class AddAdmin extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
 
         jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jTextField3.setText("jTextField1");
@@ -98,7 +96,7 @@ public class AddAdmin extends javax.swing.JFrame {
         jTextField4.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 500));
+        setPreferredSize(new java.awt.Dimension(450, 550));
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
@@ -117,7 +115,7 @@ public class AddAdmin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 160, 40));
 
         fname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         fname.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +126,7 @@ public class AddAdmin extends javax.swing.JFrame {
         jPanel1.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 51, 199, -1));
 
         lname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel1.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 95, 199, -1));
+        jPanel1.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 199, -1));
 
         username.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         username.addActionListener(new java.awt.event.ActionListener() {
@@ -136,14 +134,14 @@ public class AddAdmin extends javax.swing.JFrame {
                 usernameActionPerformed(evt);
             }
         });
-        jPanel1.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 134, 199, -1));
+        jPanel1.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 199, -1));
 
         email.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 173, 199, -1));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 199, -1));
 
         type.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Patient" }));
-        jPanel1.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 200, 30));
+        jPanel1.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 200, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("FIRSTNAME");
@@ -151,11 +149,11 @@ public class AddAdmin extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("LASTNAME");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 98, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("USERNAME");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 137, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("EMAIL");
@@ -163,7 +161,7 @@ public class AddAdmin extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("TYPE");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -187,10 +185,8 @@ public class AddAdmin extends javax.swing.JFrame {
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 51, -1, 100));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\ProBook\\Desktop\\DHP-DESTINADO-IT2B-GUI\\src\\icons\\log in bg.png")); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 240, 450, 320));
-
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/log in bg.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 260, 450, 280));
 
         jButton5.setBackground(new java.awt.Color(51, 153, 255));
         jButton5.setText("EXIT");
@@ -199,28 +195,21 @@ public class AddAdmin extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 110, 40));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\ProBook\\Downloads\\back.jpg")); // NOI18N
-        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -180, 460, 700));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 70, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 86, Short.MAX_VALUE))
         );
 
         pack();
@@ -257,10 +246,7 @@ dbConnector dbc = new dbConnector();
     String fn = fname.getText().trim();
     String ln = lname.getText().trim();
     String uname = username.getText().trim();
-    String pass = new String(password.getPassword()).trim();
-    String Cpass = new String(Cpassword.getPassword()).trim();
     String e = email.getText().trim();
-    String a = age1.getText().trim();
     String at = type.getSelectedItem().toString().trim();
     
 
@@ -338,11 +324,9 @@ dbConnector dbc = new dbConnector();
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;

@@ -1,12 +1,14 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package dhp;
 
+import user.UserDashboard;
 import admin.AdminDashboard;
 import config.dbConnector;
+import config.session;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -35,10 +37,19 @@ public class DHPMAIN extends javax.swing.JFrame {
         {
             String query = "SELECT * FROM tbl_user WHERE u_username='"+ username +"'AND u_password='"+ password +"'";
             ResultSet resultSet = connector.getData(query);
-            if(resultSet.next())
-            {
+            if(resultSet.next()){
                 status = resultSet.getString("u_status");
                 type = resultSet.getString("u_type");
+                session sess = session.getInstance();
+
+                sess.setUid(resultSet.getString("u_id"));
+                sess.setFname(resultSet.getString("u_fname"));
+                sess.setLname(resultSet.getString("u_lname"));
+                sess.setUsername(resultSet.getString("u_username"));
+                sess.setEmail(resultSet.getString("u_email"));               
+                sess.setType(resultSet.getString("u_type"));
+
+                
 
                 return true;
             }else
@@ -234,10 +245,10 @@ public class DHPMAIN extends javax.swing.JFrame {
             }else if(type.equals("Patient"))
             {
                 JOptionPane.showMessageDialog(null, "Login Succesfully");
-                PatientDashboard ed = new PatientDashboard();
+                UserDashboard ed = new UserDashboard();
                 ed.setVisible(true);
                 this.dispose();
-            }else if(!type.equals("Employee") || !type.equals("Pending") || !type.equals("Admin"))
+            }else if(!type.equals("User") || !type.equals("Pending") || !type.equals("Admin"))
             {
                 JOptionPane.showMessageDialog(null, "Unknown Account Type, Contact the Admin");
             }
