@@ -36,7 +36,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         {
             dbConnector dbc = new dbConnector();
             ResultSet rs = dbc.getData("SELECT u_id, u_fname, u_lname, u_username, "
-                                        + "u_type, u_email FROM tbl_user");
+                                        + "u_type, u_email,u_status FROM tbl_user");
             account_table.setModel(DbUtils.resultSetToTableModel(rs));
              rs.close();
         }catch(SQLException ex){
@@ -108,7 +108,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 500));
         setMinimumSize(new java.awt.Dimension(600, 500));
-        setPreferredSize(new java.awt.Dimension(800, 500));
+        setPreferredSize(new java.awt.Dimension(900, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
@@ -201,7 +201,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jDesktopPane1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 110));
 
-        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 915, 521));
+        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 521));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

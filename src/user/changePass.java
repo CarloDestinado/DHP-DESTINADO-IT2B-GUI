@@ -39,19 +39,22 @@ public class changePass extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        name1 = new javax.swing.JLabel();
         add1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        name1 = new javax.swing.JLabel();
         oldPassword = new javax.swing.JPasswordField();
         name2 = new javax.swing.JLabel();
         newPassword = new javax.swing.JPasswordField();
         name3 = new javax.swing.JLabel();
         Cpassword = new javax.swing.JPasswordField();
+        acc_uname = new javax.swing.JLabel();
+        acc_email = new javax.swing.JLabel();
+        acc_id = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -74,23 +77,16 @@ public class changePass extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 100));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/log in bg.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 250, 270, 320));
-
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setText("CANCEL");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 80, 20));
 
-        name1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        name1.setText("ENTER OLD PASS");
-        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 110, 30));
-
-        add1.setBackground(new java.awt.Color(51, 153, 255));
+        add1.setBackground(new java.awt.Color(204, 204, 204));
         add1.setText("Confirm");
         add1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -102,34 +98,56 @@ public class changePass extends javax.swing.JFrame {
                 add1ActionPerformed(evt);
             }
         });
-        jPanel1.add(add1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 160, 30));
+        jPanel1.add(add1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 130, 30));
 
-        oldPassword.setBackground(new java.awt.Color(51, 153, 255));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/log in bg.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 230, 480, 320));
+
+        name1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        name1.setText("ENTER OLD PASS");
+        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 120, 30));
+
+        oldPassword.setBackground(new java.awt.Color(204, 204, 204));
+        oldPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         oldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 oldPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(oldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 210, 30));
+        jPanel1.add(oldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 200, 30));
 
-        name2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        name2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         name2.setText("ENTER NEW PASS");
-        jPanel1.add(name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 110, 30));
+        jPanel1.add(name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 120, 30));
 
-        newPassword.setBackground(new java.awt.Color(51, 153, 255));
+        newPassword.setBackground(new java.awt.Color(204, 204, 204));
+        newPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         newPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(newPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 210, 30));
+        jPanel1.add(newPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 200, 30));
 
-        name3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        name3.setText("ENTER NEW PASS");
-        jPanel1.add(name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 110, 30));
+        name3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        name3.setText("CONFIRM NEW PASS");
+        jPanel1.add(name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 150, 30));
 
-        Cpassword.setBackground(new java.awt.Color(51, 153, 255));
-        jPanel1.add(Cpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 210, 30));
+        Cpassword.setBackground(new java.awt.Color(204, 204, 204));
+        Cpassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jPanel1.add(Cpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 200, 30));
+
+        acc_uname.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        acc_uname.setText("username sa katawhan");
+        jPanel1.add(acc_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 290, -1));
+
+        acc_email.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        acc_email.setText("email sa katawhan");
+        jPanel1.add(acc_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, -1, -1));
+
+        acc_id.setText("12345");
+        jPanel1.add(acc_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -261,6 +279,9 @@ public class changePass extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField Cpassword;
+    private javax.swing.JLabel acc_email;
+    private javax.swing.JLabel acc_id;
+    private javax.swing.JLabel acc_uname;
     public javax.swing.JButton add1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel7;
