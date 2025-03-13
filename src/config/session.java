@@ -14,6 +14,7 @@ public class session {
     private static session instance;
         
         private int uid;
+        private int age;
         private String fname;
         private String lname;
         private String username;
@@ -35,6 +36,8 @@ public class session {
       return instance == null;   
 
     }
+
+    
     
     public int getUid() {
         return uid;
@@ -42,6 +45,14 @@ public class session {
 
     public void setUid(int uid) {
         this.uid = uid;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
       
     public String getFname() {
