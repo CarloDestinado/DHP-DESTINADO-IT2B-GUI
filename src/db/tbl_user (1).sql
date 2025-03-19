@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2025 at 02:11 PM
+-- Generation Time: Mar 18, 2025 at 07:59 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,7 +45,12 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`u_id`, `u_fname`, `u_lname`, `u_username`, `u_password`, `u_email`, `u_age`, `u_type`, `u_status`) VALUES
 (1, 'test', 'test', 'test', '12345678', 'test@gmail.com', 40, 'Patient', 'Active'),
-(2, 'test2', 'test2', 'test2', '12345678', 'test2@gmail.com', 20, 'Admin', 'Pending');
+(2, 'test2', 'test2', 'test2', '73l8gRjwLftklgfdXT+MdiMEjJwGPVMsyVxe16iYpk8=', 'test2@gmail.com', 20, 'Admin', 'Active'),
+(3, 'a', 'a', 'a', '12345678', 'a@gmail.com', 12, 'Admin', 'Active'),
+(4, 'destinado', 'b', 'Choy1', 'a0VX3KCa1TD/9hAATGyRjLwwww2rs8WjD1ThvDe9zxg=', 'ddd@gmail.com', 50, 'Medical Staff', 'Active'),
+(5, 'test', 'test', 'test3', '12345678', 'test3@gmail.com', 12, 'Admin', 'Pending'),
+(6, 'test', 'test', 'test4', '12345678', 'test4@gmail.com', 12, 'Admin', 'Pending'),
+(7, 'test', 'test', 'test5', '73l8gRjwLftklgfdXT+MdiMEjJwGPVMsyVxe16iYpk8=', 'test5@gmail.com', 12, 'Admin', 'Pending');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +70,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -6,6 +6,8 @@
 package dhp;
 
 import config.dbConnector;
+import config.passwordHasher;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
@@ -99,6 +101,8 @@ public class Signup extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         dob1 = new javax.swing.JLabel();
         Cpassword = new javax.swing.JPasswordField();
+        phone1 = new javax.swing.JLabel();
+        age1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -183,10 +187,10 @@ public class Signup extends javax.swing.JFrame {
 
         stats.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         stats.setText("TYPE");
-        jPanel41.add(stats, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 40, 30));
+        jPanel41.add(stats, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 40, 30));
 
         type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Patient", "Medical Staff" }));
-        jPanel41.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 270, 30));
+        jPanel41.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 270, 30));
 
         jButton3.setBackground(new java.awt.Color(51, 153, 255));
         jButton3.setText("REGISTER");
@@ -208,6 +212,17 @@ public class Signup extends javax.swing.JFrame {
         jPanel41.add(dob1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 150, 30));
         jPanel41.add(Cpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 270, 30));
 
+        phone1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        phone1.setText("AGE");
+        jPanel41.add(phone1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 40, 30));
+
+        age1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                age1ActionPerformed(evt);
+            }
+        });
+        jPanel41.add(age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 270, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -216,7 +231,7 @@ public class Signup extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
         );
 
         pack();
@@ -252,6 +267,7 @@ public class Signup extends javax.swing.JFrame {
     String pass = new String(password.getPassword()).trim();
     String Cpass = new String(Cpassword.getPassword()).trim();
     String e = email.getText().trim();
+    String a = age1.getText().trim();
     String at = type.getSelectedItem().toString().trim();
     
 
@@ -271,14 +287,24 @@ public class Signup extends javax.swing.JFrame {
              }else if(duplicateCheck())
         {
             System.out.println("Duplicate Exists");
-        }else if (dbc.insertData("INSERT INTO tbl_user (u_fname, u_lname, u_username, u_type, u_password, u_email, u_status) "
-        + "VALUES ('" + fn + "', '" + ln + "', '" + uname + "', '"+at+"','" + pass + "', '" + e + "', 'Pending')")) 
+        }else
         {
-            JOptionPane.showMessageDialog(null, "Registered succesfully!");
-            DHPMAIN d = new DHPMAIN();
-            d.setVisible(true);
-            this.dispose();
+            try 
+            {
+                String npass = passwordHasher.hashPassword(password.getText());
+                dbc.insertData("INSERT INTO tbl_user (u_fname, u_lname, u_username, u_type, u_password, u_email, u_age, u_status) "
+                + "VALUES ('" + fn + "', '" + ln + "', '" + uname + "', '"+at+"','" + npass + "', '" + e + "', '" + a + "', 'Pending')");
+
+                JOptionPane.showMessageDialog(null, "Registered succesfully!");
+                DHPMAIN d = new DHPMAIN();
+                d.setVisible(true);
+                this.dispose();
+            } catch(NoSuchAlgorithmException ex) 
+            {
+                System.out.println("" + ex);
+            }
         }
+        
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -288,6 +314,10 @@ public class Signup extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void age1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_age1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_age1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,6 +359,7 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JPasswordField Cpassword;
     private javax.swing.JLabel address;
     private javax.swing.JLabel age;
+    private javax.swing.JTextField age1;
     private javax.swing.JLabel dob;
     private javax.swing.JLabel dob1;
     private javax.swing.JTextField email;
@@ -345,6 +376,7 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JLabel name;
     private javax.swing.JPasswordField password;
     private javax.swing.JLabel phone;
+    private javax.swing.JLabel phone1;
     private javax.swing.JLabel stats;
     private javax.swing.JComboBox<String> type;
     private javax.swing.JTextField username;

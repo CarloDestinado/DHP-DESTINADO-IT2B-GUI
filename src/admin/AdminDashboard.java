@@ -35,7 +35,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         try
         {
             dbConnector dbc = new dbConnector();
-            ResultSet rs = dbc.getData("SELECT u_fname, u_lname, u_username, "
+            ResultSet rs = dbc.getData("SELECT u_id, u_fname, u_lname, u_username, "
                                         + "u_type, u_email FROM tbl_user");
             account_table.setModel(DbUtils.resultSetToTableModel(rs));
              rs.close();
@@ -108,10 +108,12 @@ public class AdminDashboard extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 500));
         setMinimumSize(new java.awt.Dimension(600, 500));
-        setPreferredSize(new java.awt.Dimension(800, 500));
+        setPreferredSize(new java.awt.Dimension(900, 550));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 528, 510, -1));
 
         jDesktopPane1.setBackground(new java.awt.Color(51, 153, 255));
         jDesktopPane1.setPreferredSize(new java.awt.Dimension(900, 500));
@@ -199,28 +201,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jDesktopPane1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 110));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(408, 408, 408)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 903, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -256,28 +237,52 @@ public class AdminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+
         int rowIndex = account_table.getSelectedRow();
         
-        if (rowIndex < 0){
-            JOptionPane.showMessageDialog(null, "Please select a Patient");
-        }else {
-          AddUser m = new AddUser();
-          try {
-          
-              dbConnector dbc = new dbConnector();
-             Resultset rs = dbc.getData("");
-             }catch{}
-          
         
-        m.fname.setText();
-        }catch(SQLexeption ex){}
-       
-        TableModel tbl = account_table.getModel(); 
- 
-        
-        UpdateUser m = new UpdateUser();
-        m.setVisible(true);
-        this.dispose();   // TODO add your handling code here:
+        if(rowIndex < 0)
+        {
+            JOptionPane.showMessageDialog(null, "Please select an Item");
+        }else
+        {
+            AddUser au = new AddUser();
+
+            
+            try
+            {
+                
+
+                dbConnector dbc = new dbConnector();
+                TableModel tbl = account_table.getModel();
+                ResultSet rs = dbc.getData("SELECT * FROM tbl_user WHERE u_id = '"+tbl.getValueAt(rowIndex,0)+"'");
+                System.out.println("\n1");
+
+                if(rs.next())
+                {
+                    System.out.println("\n2");
+
+                    au.UID.setText("" + rs.getString("u_id"));
+                    au.Age1.setText("" + rs.getString("u_age"));
+                    au.Fname.setText("" +rs.getString("u_fname"));
+                    au.Lname.setText("" + rs.getString("u_lname"));
+                    au.Username.setText("" + rs.getString("u_username"));
+                    au.type.setSelectedItem("" + rs.getString("u_type"));
+                    au.status.setSelectedItem("" + rs.getString("u_status"));
+//                    au.password.setText("" + rs.getString("u_password"));
+                    au.email.setText("" + rs.getString("u_email"));
+                    au.add.setEnabled(false);
+                    au.update.setEnabled(true);
+
+                    au.setVisible(true);
+                    this.dispose();
+                }
+                
+            }catch(SQLException ex)
+            {
+                System.out.println(""+ex);
+            }
+        }
     }//GEN-LAST:event_jPanel5MouseClicked
     
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
