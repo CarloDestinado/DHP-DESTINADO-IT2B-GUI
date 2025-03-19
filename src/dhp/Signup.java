@@ -287,7 +287,12 @@ public class Signup extends javax.swing.JFrame {
              }else if(duplicateCheck())
         {
             System.out.println("Duplicate Exists");
+<<<<<<< HEAD
         }else
+=======
+        }else if (dbc.insertData("INSERT INTO tbl_user (u_fname, u_lname, u_username, u_type, u_password, u_email, u_age, u_status) "
+        + "VALUES ('" + fn + "', '" + ln + "', '" + uname + "', '"+at+"','" + pass + "', '" + e + "', '" + a + "', 'Pending')")) 
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         {
             try 
             {

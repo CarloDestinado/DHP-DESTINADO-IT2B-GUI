@@ -43,17 +43,28 @@ public class accountDetails extends javax.swing.JFrame {
         phone = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
         add = new javax.swing.JButton();
+<<<<<<< HEAD
         jLabel8 = new javax.swing.JLabel();
+=======
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         jButton1 = new javax.swing.JButton();
         name1 = new javax.swing.JLabel();
         UID = new javax.swing.JTextField();
         name2 = new javax.swing.JLabel();
         Age1 = new javax.swing.JTextField();
         add1 = new javax.swing.JButton();
+<<<<<<< HEAD
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+=======
+        jLabel8 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -80,7 +91,11 @@ public class accountDetails extends javax.swing.JFrame {
         name.setText("FIRSTNAME");
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 80, 30));
 
+<<<<<<< HEAD
         Fname.setBackground(new java.awt.Color(51, 153, 255));
+=======
+        Fname.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         Fname.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         Fname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +108,11 @@ public class accountDetails extends javax.swing.JFrame {
         age.setText("LASTNAME");
         jPanel1.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 80, 30));
 
+<<<<<<< HEAD
         Lname.setBackground(new java.awt.Color(51, 153, 255));
+=======
+        Lname.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         Lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LnameActionPerformed(evt);
@@ -105,7 +124,11 @@ public class accountDetails extends javax.swing.JFrame {
         address.setText("USERNAME");
         jPanel1.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 80, 30));
 
+<<<<<<< HEAD
         Username.setBackground(new java.awt.Color(51, 153, 255));
+=======
+        Username.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsernameActionPerformed(evt);
@@ -117,7 +140,11 @@ public class accountDetails extends javax.swing.JFrame {
         phone.setText("EMAIL");
         jPanel1.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 50, 30));
 
+<<<<<<< HEAD
         email.setBackground(new java.awt.Color(51, 153, 255));
+=======
+        email.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailActionPerformed(evt);
@@ -125,7 +152,11 @@ public class accountDetails extends javax.swing.JFrame {
         });
         jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 210, 30));
 
+<<<<<<< HEAD
         add.setBackground(new java.awt.Color(51, 153, 255));
+=======
+        add.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         add.setText("Change Pass");
         add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -137,26 +168,40 @@ public class accountDetails extends javax.swing.JFrame {
                 addActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 160, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/log in bg.png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 250, 270, 320));
 
+=======
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 160, 30));
+
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         jButton1.setText("CANCEL");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, 40));
+=======
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, -1));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 
         name1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         name1.setText("USER ID");
         jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 60, 30));
 
         UID.setEditable(false);
+<<<<<<< HEAD
         UID.setBackground(new java.awt.Color(51, 153, 255));
+=======
+        UID.setBackground(new java.awt.Color(204, 204, 204));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         UID.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         UID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,18 +214,40 @@ public class accountDetails extends javax.swing.JFrame {
         name2.setText("AGE");
         jPanel1.add(name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 40, 30));
 
+<<<<<<< HEAD
         Age1.setBackground(new java.awt.Color(51, 153, 255));
         Age1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jPanel1.add(Age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 210, 30));
 
         add1.setBackground(new java.awt.Color(51, 153, 255));
         add1.setText("Confirm");
+=======
+        Age1.setBackground(new java.awt.Color(204, 204, 204));
+        Age1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jPanel1.add(Age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 210, 30));
+
+        add1.setBackground(new java.awt.Color(204, 204, 204));
+        add1.setText("Confirm");
+        add1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                add1MouseClicked(evt);
+            }
+        });
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         add1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 add1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         jPanel1.add(add1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 160, 30));
+=======
+        jPanel1.add(add1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 160, 30));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/log in bg.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 240, 510, 320));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -230,6 +297,13 @@ public class accountDetails extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UIDActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void add1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_add1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_add1MouseClicked
+
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
     private void add1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add1ActionPerformed
         dbConnector dbc = new dbConnector();
         session sess = session.getInstance();

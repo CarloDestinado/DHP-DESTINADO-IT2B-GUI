@@ -36,7 +36,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         {
             dbConnector dbc = new dbConnector();
             ResultSet rs = dbc.getData("SELECT u_id, u_fname, u_lname, u_username, "
+<<<<<<< HEAD
                                         + "u_type, u_email FROM tbl_user");
+=======
+                                        + "u_type, u_email,u_status FROM tbl_user");
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
             account_table.setModel(DbUtils.resultSetToTableModel(rs));
              rs.close();
         }catch(SQLException ex){
@@ -201,7 +205,11 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jDesktopPane1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 110));
 
+<<<<<<< HEAD
         getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 570));
+=======
+        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 521));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -263,13 +271,20 @@ public class AdminDashboard extends javax.swing.JFrame {
                     System.out.println("\n2");
 
                     au.UID.setText("" + rs.getString("u_id"));
+<<<<<<< HEAD
                     au.Age1.setText("" + rs.getString("u_age"));
+=======
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
                     au.Fname.setText("" +rs.getString("u_fname"));
                     au.Lname.setText("" + rs.getString("u_lname"));
                     au.Username.setText("" + rs.getString("u_username"));
                     au.type.setSelectedItem("" + rs.getString("u_type"));
                     au.status.setSelectedItem("" + rs.getString("u_status"));
+<<<<<<< HEAD
 //                    au.password.setText("" + rs.getString("u_password"));
+=======
+                    au.password.setText("" + rs.getString("u_password"));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
                     au.email.setText("" + rs.getString("u_email"));
                     au.add.setEnabled(false);
                     au.update.setEnabled(true);

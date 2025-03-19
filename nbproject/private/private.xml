@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/DANIEL%20FAILADONA/Documents/DHP-DESTINADO-IT2B-GUI/src/dhp/Signup.java</file>
             <file>file:/C:/Users/DANIEL%20FAILADONA/Documents/DHP-DESTINADO-IT2B-GUI/src/admin/AddUser.java</file>
             <file>file:/C:/Users/DANIEL%20FAILADONA/Documents/DHP-DESTINADO-IT2B-GUI/src/admin/AdminDashboard.java</file>
+=======
+            <file>file:/C:/Users/DANIEL%20FAILADONA/Documents/DHP-DESTINADO-IT2B-GUI/src/user/changePass.java</file>
+            <file>file:/C:/Users/DANIEL%20FAILADONA/Documents/DHP-DESTINADO-IT2B-GUI/src/config/passwordHasher.java</file>
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         </group>
     </open-files>
 </project-private>

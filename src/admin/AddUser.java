@@ -6,8 +6,11 @@
 package admin;
 
 import config.dbConnector;
+<<<<<<< HEAD
 import config.passwordHasher;
 import java.security.NoSuchAlgorithmException;
+=======
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
@@ -268,6 +271,14 @@ public class AddUser extends javax.swing.JFrame {
                 addMouseClicked(evt);
             }
         });
+<<<<<<< HEAD
+=======
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 220, 40));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -398,6 +409,7 @@ public class AddUser extends javax.swing.JFrame {
         }else if(duplicateCheck())
         {
             System.out.println("Duplicate Exists");
+<<<<<<< HEAD
         }else
         { try
             {
@@ -416,6 +428,21 @@ public class AddUser extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_addMouseClicked
+=======
+        }else if (dbc.insertData("INSERT INTO tbl_user (u_age, u_fname, u_lname, u_username, u_type, u_password, u_email, u_status) "
+            + "VALUES ('"+a+"','" + fn + "', '" + ln + "', '" + uname + "', '"+at+"','" + pass + "', '" + e + "', '"+s+"')"))
+    {
+        JOptionPane.showMessageDialog(null, "Registered succesfully!");
+        AdminDashboard rd = new AdminDashboard();
+        rd.setVisible(true);
+        this.dispose();
+        }
+    }//GEN-LAST:event_addMouseClicked
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addActionPerformed
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         AdminDashboard d = new AdminDashboard();
@@ -454,6 +481,7 @@ public class AddUser extends javax.swing.JFrame {
             System.out.println("Duplicate Exists");
         }else
         {
+<<<<<<< HEAD
             try {
                 String npass = passwordHasher.hashPassword(password.getText());
 
@@ -465,6 +493,14 @@ public class AddUser extends javax.swing.JFrame {
             } catch (NoSuchAlgorithmException ex) {
                 System.out.println("" + ex);
             }
+=======
+            dbc.updateData("UPDATE tbl_user SET u_age = '"+a+"', u_fname = '"+fn+"', u_lname = '"+ln+"', u_username = '"+uname+"',"
+                + " u_password = '"+pass+"', u_email = '"+e+"', u_type = '"+at+"', u_status = '"+s+"' WHERE u_id = '"+u+"'");
+
+            AdminDashboard ad = new AdminDashboard();
+            ad.setVisible(true);
+            this.dispose();
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
         }
     }//GEN-LAST:event_updateActionPerformed
 

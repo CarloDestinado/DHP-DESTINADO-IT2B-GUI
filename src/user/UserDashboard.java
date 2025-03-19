@@ -5,17 +5,25 @@
  */
 package user;
 
+<<<<<<< HEAD
 import config.dbConnector;
+=======
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 import config.session;
 import dhp.DHPMAIN;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
+<<<<<<< HEAD
 /**
  *
  * @author DANIEL FAILADONA
  */
+=======
+
+
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 public class UserDashboard extends javax.swing.JFrame {
 
     /**
@@ -53,6 +61,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(940, 500));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -62,7 +71,7 @@ public class UserDashboard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-user-100.png"))); // NOI18N
@@ -88,7 +97,7 @@ public class UserDashboard extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("VIEW DIAGNOSIS");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
         jButton5.setText("EXIT");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +109,24 @@ public class UserDashboard extends javax.swing.JFrame {
 
         acc_type.setFont(new java.awt.Font("Segoe Print", 0, 18)); // NOI18N
         acc_type.setText("patient");
-        jPanel3.add(acc_type, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
+        jPanel3.add(acc_type, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 110, -1));
+
+        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setText("PROFILE SETTING");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 30));
+
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 180, 50));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(671, 0, 179, 500));
 
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -137,7 +163,11 @@ public class UserDashboard extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+<<<<<<< HEAD
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 258, 448, 143));
+=======
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 448, 143));
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
 
         jLabel5.setText("more infos:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 235, -1, -1));
@@ -146,7 +176,7 @@ public class UserDashboard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 892, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,6 +213,7 @@ public class UserDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowActivated
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+<<<<<<< HEAD
         session sess = session.getInstance();
         accountDetails accd = new accountDetails();
         
@@ -208,6 +239,11 @@ public class UserDashboard extends javax.swing.JFrame {
         {
             System.out.println(""+ex);
         }
+=======
+        accountDetails m = new accountDetails();
+        m.setVisible(true);
+        this.dispose();
+>>>>>>> 63a56da77297f68c2927305f2c1176234e9b79f1
     }//GEN-LAST:event_jPanel4MouseClicked
 
     /**
